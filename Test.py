@@ -22,10 +22,12 @@ if type == "P":
     if not(0 < w <= 10):
         print("The weight must be in the range 0 < w <= 10")
         exit()
+else:
+    w = 0
 
 d = int(input("Distance (km): "))
 if not(1 <= d <= 1000):
-    print("The transport distance must be in the range 1 <= w <= 1000")
+    print("The distance must be in the range 1 <= w <= 1000")
     exit()
 
 transport_fee = transport_fee_cal(t, w, d)
