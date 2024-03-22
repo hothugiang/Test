@@ -14,7 +14,7 @@ def main():
 
     d = float(input("Distance (km): "))
     if not(1 <= d <= 1000):
-        print("The distance must be in the range 1 <= w <= 1000")
+        print("The distance must be in the range 1 <= d <= 1000")
         return
 
     fee = 0
