@@ -29,7 +29,7 @@ def main():
         elif 500 <= d <= 1000:
             fee = 30000 * w
 
-    print(f"Your transport fee is: {fee} VND")
+    print(fee)
 
 if __name__ == "__main__":
     main()

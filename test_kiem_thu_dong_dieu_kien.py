@@ -25,25 +25,25 @@ class TestTransportFee(unittest.TestCase):
     @patch('builtins.print')
     def test_4(self, mock_print, mock_input):
         main()
-        mock_print.assert_called_with("Your transport fee is: 10000 VND")
+        mock_print.assert_called_with(10000)
 
     @patch('builtins.input', side_effect=['D', '500'])
     @patch('builtins.print')
     def test_5(self, mock_print, mock_input):
         main()
-        mock_print.assert_called_with("Your transport fee is: 25000 VND")
+        mock_print.assert_called_with(25000)
 
     @patch('builtins.input', side_effect=['P', '1', '1'])
     @patch('builtins.print')
     def test_6(self, mock_print, mock_input):
         main()
-        mock_print.assert_called_with("Your transport fee is: 15000.0 VND")
+        mock_print.assert_called_with(15000.0)
 
     @patch('builtins.input', side_effect=['P', '1', '500'])
     @patch('builtins.print')
     def test_7(self, mock_print, mock_input):
         main()
-        mock_print.assert_called_with("Your transport fee is: 30000.0 VND")
+        mock_print.assert_called_with(30000.0)
 
 if __name__ == '__main__':
     unittest.main()
